@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>À propos de moi - Wawa Thermomix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:url('fond-cuisine.jpg') center/cover fixed no-repeat;color:#fff;opacity:0;transition:opacity .8s ease-in;position:relative;min-height:100vh}
+  body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(8,8,8,0.25);z-index:0;pointer-events:none}
+  *{position:relative;z-index:1}
+  :root{--gris-clair:#E8E8E8;--gris:#B8B8B8;--blanc:#FFFFFF;--fond-carte:rgba(30,30,30,0.9)}
+  a{color:var(--gris-clair);text-decoration:none}
+  header{background:rgba(20,20,20,0.92);border-bottom:1px solid rgba(255,255,255,.15);padding:14px 18px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;backdrop-filter:blur(12px)}
+  .brand{display:flex;justify-content:center;align-items:center}
+  .brand img{height:110px;width:auto;border-radius:22px;box-shadow:0 0 20px rgba(255,255,255,.2)}
+  nav{display:flex;align-items:center;gap:8px}
+  .nav-btn{padding:6px 14px;border-radius:999px;font-size:.8rem;border:1px solid rgba(255,255,255,.15);background:rgba(40,40,40,.85);color:#f5f5f5;cursor:pointer;transition:background .2s,border-color .2s}
+  .nav-btn:hover{background:rgba(55,55,55,.9);border-color:rgba(255,255,255,.3)}
+  .nav-btn--active{background:#fff;color:#1a1a1a;font-weight:600;border-color:#fff}
+  .btn-primary{background:#fff;border:none;padding:9px 18px;border-radius:999px;color:#1a1a1a;font-weight:600;cursor:pointer;font-size:.9rem;box-shadow:0 0 16px rgba(255,255,255,.3);transition:transform .2s,box-shadow .2s;text-decoration:none;display:inline-block}
+  .btn-primary:hover{transform:translateY(-1px) scale(1.02);box-shadow:0 0 24px rgba(255,255,255,.5);background:#f8f8f8}
+  main{max-width:900px;margin:0 auto;padding:26px 18px 60px}
+  h1{font-size:2rem;margin-bottom:10px;letter-spacing:.3px;text-shadow:0 3px 16px rgba(0,0,0,0.95);color:#fff}
+  h2{font-size:1.6rem;margin-bottom:12px;text-shadow:0 3px 16px rgba(0,0,0,0.95);color:#fff}
+  .tagline{color:#f5f5f5;margin-bottom:24px;font-size:.98rem}
+  .intro{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:30px}
+  .intro img{width:180px;height:180px;object-fit:cover;border-radius:50%;border:3px solid #fff;box-shadow:0 0 25px rgba(255,255,255,.3)}
+  .bubble{background:var(--fond-carte);border-radius:18px;padding:22px 20px;box-shadow:0 0 30px rgba(0,0,0,.85);border:1px solid rgba(255,255,255,.12);line-height:1.7;transition:transform .25s,box-shadow .25s;backdrop-filter:blur(14px);border-top:4px solid #fff;margin-bottom:40px}
+  .bubble:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(0,0,0,.92)}
+  .highlight{color:var(--gris-clair);font-weight:600}
+  .content-section{background:var(--fond-carte);border-radius:18px;padding:28px 24px;box-shadow:0 0 30px rgba(0,0,0,.85);border:1px solid rgba(255,255,255,.12);transition:transform .25s,box-shadow .25s;backdrop-filter:blur(14px);margin-bottom:30px}
+  .content-section:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(0,0,0,.92)}
+  .content-section p{color:#f5f5f5;line-height:1.6;text-shadow:0 2px 10px rgba(0,0,0,0.9)}
+  .testimonials{margin-top:30px}
+  .testimonials h2{font-size:1.4rem;margin-bottom:14px;text-shadow:0 3px 16px rgba(0,0,0,0.95);color:#fff}
+  .testimonials-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--fond-carte);border-radius:18px;padding:16px;box-shadow:0 0 30px rgba(0,0,0,.85);border:1px solid rgba(255,255,255,.12);transition:transform .25s,box-shadow .25s;backdrop-filter:blur(14px)}
+  .card:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(0,0,0,.92)}
+  .testimonial-name{font-size:.8rem;color:#c8c8c8;margin-top:8px}
+  @keyframes fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  .fade-section{animation:fade-up .7s ease-out}
+  footer{border-top:1px solid rgba(255,255,255,.12);padding:16px 18px;font-size:.8rem;color:#d8d8d8;text-align:center;background:rgba(20,20,20,0.92);backdrop-filter:blur(12px)}
+  @media(max-width:768px){header{padding:12px 12px 10px}.brand img{height:100px}nav{margin-top:4px}.intro{justify-content:center;text-align:center}.intro img{margin-bottom:4px}}
+  </style>
+</head>
+<body onload="document.body.style.opacity='1'">
+<header>
+<div class="brand"><img src="logo-wawa.png" alt="Logo Wawa Thermomix"></div>
+<nav>
+<a href="index.html" class="nav-btn">Accueil</a>
+<a href="a-propos.html" class="nav-btn nav-btn--active">À propos de moi</a>
+</nav>
+</header>
+<main>
+<section class="fade-section">
+<div class="intro">
+<img src="moi.jpg" alt="Photo de la conseillère Wawa Thermomix">
+<div>
+<h1>Jeune femme, mariée, passionnée de cuisine simple</h1>
+<p class="tagline">Le robot de cuisine m'a permis de retrouver le plaisir de cuisiner des plats maison, savoureux et plus légers, même avec un emploi du temps bien chargé.</p>
+</div>
+</div>
+<div class="bubble">
+<p>Pendant longtemps, je tournais en rond avec les mêmes recettes, peu de temps et l'envie de mieux manger sans passer mes soirées en cuisine.</p>
+<p>L'arrivée de mon <span class="highlight">robot de cuisine</span> a été un vrai déclic : des plats variés, colorés et gourmands, préparés en quelques étapes guidées. Résultat&nbsp;: je mange mieux, je me fais plaisir et j'ai réussi à perdre du poids en douceur.</p>
+<p>Aujourd'hui, je gagne un temps précieux : pendant que le robot s'occupe de la cuisson, je peux m'organiser, profiter de ma famille ou simplement souffler un peu.</p>
+<p>En tant que conseillère, mon objectif est de te montrer concrètement comment ce robot peut s'adapter à ta vie : ton niveau en cuisine, ton budget, ton quotidien. On avance à ton rythme, dans une ambiance conviviale, sans pression.</p>
+</div>
+</section>
+<section class="content-section fade-section">
+<h2>Des repas maison faciles, rapides et savoureux</h2>
+<p>Tu veux des repas maison bons, rapides et sans prise de tête&nbsp;? L'essai du nouveau Thermomix TM7 te permet de voir en vrai comment il peut simplifier ton quotidien : menus variés, gain de temps et cuisine plus gourmande.</p>
+<img src="plats.jpg" alt="Assiettes de plats maison sains et colorés" style="margin-top:20px;max-width:100%;border-radius:18px;border:1px solid rgba(255,255,255,.2);box-shadow:0 0 28px rgba(0,0,0,.6)">
+<a class="btn-primary" style="margin-top:16px" href="index.html#contact">Je réserve mon appel visio</a>
+</section>
+<section class="testimonials fade-section">
+<h2>Ce que disent mes clientes</h2>
+<div class="testimonials-grid">
+<div class="card"><p style="font-size:.9rem">"Je ne savais pas par où commencer, maintenant je prépare mes menus de la semaine en 15 minutes et je cuisine beaucoup plus maison."</p><p class="testimonial-name">S., femme active</p></div>
+<div class="card"><p style="font-size:.9rem">"Grâce à l'accompagnement, j'utilise enfin tout le potentiel du robot et j'ai repris plaisir à cuisiner."</p><p class="testimonial-name">L., jeune mariée</p></div>
+</div>
+</section>
+</main>
+<footer>Basée à Saint‑Denis (Île‑de‑France) – Rendez‑vous possibles par téléphone ou en visio. Pour toute question, utilise le formulaire de la page d'accueil pour être rappelée.</footer>
+</body>
+</html>
